@@ -1,0 +1,30 @@
+-- Script per creare ruoli nel database locale
+CREATE ROLE amedeo WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE davide WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE developers WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE giacomo WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE jurgen WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE marco WITH LOGIN CREATEDB PASSWORD 'your_password';
+CREATE ROLE onecompliance_app WITH LOGIN PASSWORD 'your_password';
+-- Ruoli riservati rimossi
+-- CREATE ROLE pg_database_owner;
+-- CREATE ROLE pg_execute_server_program;
+-- CREATE ROLE pg_monitor;
+-- CREATE ROLE pg_read_all_data;
+-- CREATE ROLE pg_read_all_settings;
+-- CREATE ROLE pg_read_all_stats;
+-- CREATE ROLE pg_read_server_files;
+-- CREATE ROLE pg_signal_backend;
+-- CREATE ROLE pg_stat_scan_tables;
+-- CREATE ROLE pg_write_all_data;
+-- CREATE ROLE pg_write_server_files;
+-- CREATE ROLE postgres WITH LOGIN SUPERUSER CREATEDB CREATEROLE PASSWORD 'your_password';
+CREATE ROLE rds_ad;
+CREATE ROLE rds_iam;
+CREATE ROLE rds_password;
+CREATE ROLE rds_replication;
+CREATE ROLE rds_superuser;
+CREATE ROLE rdsadmin WITH SUPERUSER LOGIN PASSWORD 'your_password';
+CREATE ROLE rdsproxyadmin WITH LOGIN PASSWORD 'your_password';
+CREATE ROLE rdswriteforwarduser WITH LOGIN PASSWORD 'your_password';
+--CREATE EXTENSION pldbgapi;
