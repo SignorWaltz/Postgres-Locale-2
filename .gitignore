@@ -1,1 +1,21 @@
-./pgadmin-backup
+### `.gitignore`
+
+```gitignore
+# Ignore node_modules and log files
+node_modules/
+npm-debug.log*
+
+# Ignore Docker files
+pgdata/
+pgadmin-data/
+
+# Ignore contents of pgadmin-backup but not the folder itself
+pgadmin-backup/*
+!pgadmin-backup/.gitignore
+
+# Ignore macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore .env files
+.env
