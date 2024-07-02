@@ -9,9 +9,7 @@ npm-debug.log*
 pgdata/
 pgadmin-data/
 
-# Ignore contents of pgadmin-backup but not the folder itself
-pgadmin-backup/*
-!pgadmin-backup/.gitignore
+gorico_prod*
 
 # Ignore macOS and Windows system files
 .DS_Store
