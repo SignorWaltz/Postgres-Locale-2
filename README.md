@@ -7,7 +7,8 @@ Guida:
    {
       "dns": ["8.8.8.8", "8.8.4.4"]
    }
-6. Lanciare "docker-compose up --build -d" oppure "sudo UID=$UID GID=$GID docker-compose up --build"
+5. sudo chown -R 5050:5050 ./pgadmin-backup
+6. Lanciare "sudo docker-compose up --build"
 7. Andare su <http://localhost:8080/> per pgAdmin
 8. Login con <admin@example.com> e admin
 9. Aggiungere nuovo server (solo prima volta)
