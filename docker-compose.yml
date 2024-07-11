@@ -9,7 +9,6 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: onecompliance
     volumes:
-      # - pgdata:/var/lib/postgresql/data
       - ./create_roles.sql:/docker-entrypoint-initdb.d/create_roles.sql
     ports:
       - "5432:5432"
@@ -23,9 +22,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      # - pgadmin-data:/var/lib/pgadmin
       - ./pgadmin-backup:/var/lib/pgadmin/storage/admin_example.com/shared
-    user: "${UID}:${GID}"
+    user: "5050:5050"
 
 volumes:
   pgdata:
