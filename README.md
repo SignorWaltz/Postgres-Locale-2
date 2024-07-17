@@ -8,8 +8,8 @@
 1. Clonare o scaricare questo repository
 
 2. Caricare le immagini Docker:
-   docker load < localdatabase_postgres.tar
-   docker load < pgadmin.tar
+   sudo docker load < localdatabase_postgres.tar
+   sudo docker load < pgadmin.tar
    
 3. Impostare i permessi corretti per la cartella pgadmin-backup:
    sudo chown -R 5050:5050 ./pgadmin-backup
@@ -30,4 +30,4 @@
 1. Sostituire il file .backup esistente con il nuovo nella cartella `/pgadmin-backup`
 
 2. Avviare l'ambiente Docker:
-   docker-compose up -d
+   sudo docker-compose up -d (in caso lanciare senza trattino quindi "sudo docker compose up -d")
