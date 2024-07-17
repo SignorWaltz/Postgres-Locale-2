@@ -1,23 +1,33 @@
-Guida:
+# Guida all'installazione e configurazione
 
-1. Git pull
-2. Inserire il file .backup dentro a /pgadmin-backup
-3. sudo nano /etc/docker/daemon.json
-4. aggiungere:
-   {
-      "dns": ["8.8.8.8", "8.8.4.4"]
-   }
-5. sudo chown -R 5050:5050 ./pgadmin-backup
-6. Lanciare "sudo docker-compose up --build"
-7. Andare su <http://localhost:8080/> per pgAdmin
-8. Login con <admin@example.com> e admin
-9. Aggiungere nuovo server (solo prima volta)
-    a. Nome a piacere
-    b. host: postgres
-    c. maintenance: postgres
-    d. username: postgres
-    e. password: postgres
-10. Creare database e ripristinare backup (errori minori sono normali)
-11. Installare estensione con:
-    CREATE EXTENSION pldbgapi;
-12. Have fun
+## Prerequisiti
+- Docker e Docker Compose installati sulla macchina
+
+## Installazione iniziale (da eseguire solo la prima volta)
+
+1. Clonare o scaricare questo repository
+
+2. Caricare le immagini Docker:
+   docker load < localdatabase_postgres.tar
+   docker load < pgadmin.tar
+   
+3. Impostare i permessi corretti per la cartella pgadmin-backup:
+   sudo chown -R 5050:5050 ./pgadmin-backup
+
+4. Accedere a pgAdmin:
+- Aprire un browser e navigare su http://localhost:8080/
+- Login con email: admin@example.com e password: admin
+
+5. Aggiungere nuovo server in pgAdmin:
+   a. Nome: a piacere
+   b. Host: postgres
+   c. Maintenance database: postgres
+   d. Username: postgres
+   e. Password: postgres
+
+## Procedura per cambiare il file .backup
+
+1. Sostituire il file .backup esistente con il nuovo nella cartella `/pgadmin-backup`
+
+2. Avviare l'ambiente Docker:
+   docker-compose up -d
